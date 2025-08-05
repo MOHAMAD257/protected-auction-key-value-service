@@ -84,6 +84,7 @@ cc_library(
         "//:gcp_platform": ["blob_storage_client_gcp.h"],
         "//:local_platform": ["blob_storage_client_local.h"],
     }) + ["blob_storage_client.h"],
+    visibility = ["//visibility:public"],
     deps = select({
         "//:aws_platform": [
             "//components/errors:aws_error_util",
